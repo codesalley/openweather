@@ -5,7 +5,7 @@ module OpenWeather
 
     def initialize
       @api_key = nil
-      @weather_base_uri = "https://api.openweathermap.org/data/2.5/weather?"
+      @weather_base_uri = 'https://api.openweathermap.org/data/2.5/weather?'
     end
   end
 end
