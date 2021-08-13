@@ -24,14 +24,14 @@ Or install it yourself as:
 
 Add api key in config file `config/initializers/openweather.rb`
 
-```
+```ruby
 OpenWeather.configuration.api_key = 'your key'
 
 ```
 
 or
 
-```
+```ruby
 OpenWeather.config do |config|
   config.api_key = 'xssasa'
 end
