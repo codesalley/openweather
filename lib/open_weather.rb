@@ -1,6 +1,7 @@
-require 'open_weather/Configuration'
-require 'open_weather/version'
-require 'open_weather/current_weather'
+require "open_weather/Configuration"
+require "open_weather/version"
+require "open_weather/current_weather"
+require "open_weather/hourly_forecast"
 
 module OpenWeather
   class << self
