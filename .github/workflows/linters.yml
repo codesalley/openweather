@@ -1,16 +1,19 @@
-name: Ruby
+name: Linters
 
-on: [push, pull_request]
+on: pull_request
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
+  rubocop:
+    name: Rubocop
+    runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v2
-      - name: Set up Ruby
-        uses: ruby/setup-ruby@v1
+      - uses: actions/setup-ruby@v1
         with:
-          ruby-version: 3.0.0
-          bundler-cache: true
-      - name: Run the default task
-        run: bundle exec rake
+          ruby-version: 2.6.x
+      - name: Setup Rubocop
+        run: |
+          gem install --no-document rubocop:'~>1.7' 
+          [ -f .rubocop.yml ] || .rubocop.yml
+      - name: Rubocop Report
+        run: rubocop --color
