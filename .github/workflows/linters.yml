@@ -17,3 +17,5 @@ jobs:
           [ -f .rubocop.yml ] || .rubocop.yml
       - name: Rubocop Report
         run: rubocop --color
+      - name: Run Test
+        run: rake spec
