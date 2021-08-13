@@ -17,8 +17,3 @@ jobs:
           [ -f .rubocop.yml ] || .rubocop.yml
       - name: Rubocop Report
         run: rubocop --color
-        run: |
-          gem install --no-document rspec 
-        run: |
-          rake rspec
-
