@@ -10,13 +10,19 @@ module OpenWeather
       url = OpenWeather.configuration.weather_base_uri
       api_key = OpenWeather.configuration.api_key
       uri = @helper.name_to_url(url, name, api_key, units, lang)
-      response = HTTParty.get(uri)
-      if response.message == "Unauthorized" || response.code == 404
+      begin
+        @response = HTTParty.get(uri)
+      rescue => exception
+        logger = Logger.new(STDOUT)
+        logger.error("Network is required")
+        return []
+      end
+      if @response.message == "Unauthorized" || @response.code == 404
         logger = Logger.new(STDOUT)
         logger.error("Api Key is required")
         return []
       end
-      res = @helper.to_json(response.body)
+      res = @helper.to_json(@response.body)
       return res
     end
 
@@ -24,27 +30,40 @@ module OpenWeather
       url = OpenWeather.configuration.weather_base_uri
       api_key = OpenWeather.configuration.api_key
       uri = @helper.id_to_url(url, id, api_key, units, lang)
-      response = HTTParty.get(uri)
-      if response.message == "Unauthorized" || response.code == 404
+      begin
+        @response = HTTParty.get(uri)
+      rescue => exception
+        logger = Logger.new(STDOUT)
+        logger.error("Network is required")
+        return []
+      end
+      if @response.message == "Unauthorized" || @response.code == 404
         logger = Logger.new(STDOUT)
         logger.error("Api Key is required")
         return []
       end
-      res = @helper.to_json(response.body)
+      res = @helper.to_json(@response.body)
       return res
     end
 
-    def self.by_coords(cords: [], units: "standard", lang: "en")
+    def self.by_coords(coords: [], units: "standard", lang: "en")
       url = OpenWeather.configuration.weather_base_uri
       api_key = OpenWeather.configuration.api_key
-      uri = @helper.cords_to_url(url, cords, api_key, units, lang)
-      response = HTTParty.get(uri)
-      if response.message == "Unauthorized" || response.code == 404
+      uri = @helper.cords_to_url(url, coords, api_key, units, lang)
+
+      begin
+        @response = HTTParty.get(uri)
+      rescue => exception
+        logger = Logger.new(STDOUT)
+        logger.error("Network is required")
+        return []
+      end
+      if @response.message == "Unauthorized" || @response.code == 404
         logger = Logger.new(STDOUT)
         logger.error("Api Key is required")
         return []
       end
-      res = @helper.to_json(response.body)
+      res = @helper.to_json(@response.body)
       return res
     end
 
@@ -52,13 +71,19 @@ module OpenWeather
       url = OpenWeather.configuration.weather_base_uri
       api_key = OpenWeather.configuration.api_key
       uri = @helper.zipcode_to_url(url, zipcode, country, api_key, units, lang)
-      response = HTTParty.get(uri)
-      if response.message == "Unauthorized" || response.code == 404
+      begin
+        @response = HTTParty.get(uri)
+      rescue => exception
+        logger = Logger.new(STDOUT)
+        logger.error("Network is required")
+        return []
+      end
+      if @response.message == "Unauthorized" || @response.code == 404
         logger = Logger.new(STDOUT)
         logger.error("Api Key is required")
         return []
       end
-      res = @helper.to_json(response.body)
+      res = @helper.to_json(@response.body)
       return res
     end
   end
