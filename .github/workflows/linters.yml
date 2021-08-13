@@ -17,13 +17,8 @@ jobs:
           [ -f .rubocop.yml ] || .rubocop.yml
       - name: Rubocop Report
         run: rubocop --color
-  test: 
-    name: Set up Ruby
-    runs-on: ubuntu-18.04
-    steps: 
-      - uses: actions/checkout@v2
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: 2.5.x
-        run: | 
+        run: |
+          gem install --no-document rspec 
+        run: |
           rake rspec
+
