@@ -33,7 +33,7 @@ or
 
 ```ruby
 OpenWeather.config do |config|
-  config.api_key = 'xssasa'
+  config.api_key = 'your key'
 end
 ```
 
