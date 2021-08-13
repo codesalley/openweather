@@ -45,7 +45,8 @@ params overview
 
 ```
 
-- Get weather by city name
+### Get weather by city name
+
 - ```ruby
   OpenWeather::CurrentWeather.by_city(name: "london") #params: name -> "london", lang -> 'en', units -> "standard"
   ```
@@ -57,23 +58,27 @@ params overview
      #params: zipcode -> 94040, lang -> 'en', units -> "standard"
   ```
 
-### Get Weather by geographic coordinates[lon, lat]. , refer to [openweathermap.org](https://openweathermap.org/current#geo)
+### Get Weather by geographic coordinates[lon, lat]. more info -> [openweathermap.org](https://openweathermap.org/current#geo)
 
 - ```ruby
       OpenWeather::CurrentWeather.by_coords(coords: [-0.8393, 9.40078])
       #params: corods -> [lon, lat], lang -> 'en', units -> "standard"
   ```
 
-### Get weather by city id, refer to [openweathermap.org](https://openweathermap.org/current#cityid)
+### Get weather by city id. more info -> [openweathermap.org](https://openweathermap.org/current#cityid)
 
 - ```ruby
     OpenWeather::CurrentWeather.by_city_id(id: 2294877)
      #params: id -> 2294877, lang -> 'en', units -> "standard"
   ```
 
+## Follow me √
+
+[Twitter ≈> \_\_salley](https://twitter.com/__salley)
+
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/codesalley/open_weather.
+Bug reports and pull requests are welcome on GitHub at https://github.com/codesalley/openweather.
 
 ## License
 
