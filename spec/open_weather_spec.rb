@@ -1,11 +1,15 @@
 # frozen_string_literal: true
 
-RSpec.describe OpenWeather do
+require "open_weather"
+
+RSpec.describe OpenWeather::CurrentWeather do
   it "has a version number" do
     expect(OpenWeather::VERSION).not_to be nil
   end
 
-  it "does something useful" do
-    expect(false).to eq(true)
+  it " Get currnt weather by city name " do
+    expect(OpenWeather::CurrentWeather.by_city("codesalley")).to include("codesalley")
   end
+
+  p OpenWeather.configuration
 end
