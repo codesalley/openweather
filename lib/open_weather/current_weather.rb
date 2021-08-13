@@ -67,7 +67,7 @@ module OpenWeather
       return res
     end
 
-    def self.by_zip(zipcode: "", country: "", units: "" "standard", lang: "en")
+    def self.by_zip(zipcode: "", country: "", units: "standard", lang: "en")
       url = OpenWeather.configuration.weather_base_uri
       api_key = OpenWeather.configuration.api_key
       uri = @helper.zipcode_to_url(url, zipcode, country, api_key, units, lang)
