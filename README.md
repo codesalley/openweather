@@ -30,7 +30,7 @@ OpenWeather.config do |config|
 end
 ```
 
-## Get Current Weather
+## Current Weather Data
 
 params overview
 
@@ -72,6 +72,16 @@ params overview
     OpenWeather::CurrentWeather.by_city_id(id: 2294877)
      #params: id -> 2294877, lang -> 'en', units -> "standard"
   ```
+
+## Hourly Forecast 4 days [Requires Pro Api]
+
+```ruby
+    OpenWeather::HourlyForecast.by_city(# name, units, lang)
+    OpenWeather::HourlyForecast.by_city_id(# id, units, lang)
+    OpenWeather::HourlyForecast.by_coords(# [lon lat], units, lang)
+    OpenWeather::HourlyForecast.by_find(# [lon, lat], count, units, lang)
+    OpenWeather::HourlyForecast.by_zip(# zipcode, units, lang)
+```
 
 ## Follow me √
 
