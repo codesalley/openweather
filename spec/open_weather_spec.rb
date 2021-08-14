@@ -1,30 +1,30 @@
-require "open_weather"
+require 'open_weather'
 
 RSpec.describe OpenWeather do
-  it "has a version number" do
+  it 'has a version number' do
     expect(OpenWeather::VERSION).not_to be nil
   end
 
-  it " Get current weather by city name " do
-    response = OpenWeather::CurrentWeather.by_city(name: "london")
-    expect(response["name"]&.downcase).to eq("london")
+  it ' Get current weather by city name ' do
+    response = OpenWeather::CurrentWeather.by_city(name: 'london')
+    expect(response['name']&.downcase).to eq('london')
   end
-  it " Get current weather by city id return 404 if city id is invalid " do
-    response = OpenWeather::CurrentWeather.by_city_id(id: "1")
+  it ' Get current weather by city id return 404 if city id is invalid ' do
+    response = OpenWeather::CurrentWeather.by_city_id(id: '1')
 
     expect(response).to eq([])
   end
-  it " Get current weather by city id  " do
-    response = OpenWeather::CurrentWeather.by_city_id(id: 2294877)
+  it ' Get current weather by city id  ' do
+    response = OpenWeather::CurrentWeather.by_city_id(id: 2_294_877)
     p response
-    expect(response["name"]).to eq("Tamale")
+    expect(response['name']).to eq('Tamale')
   end
-  it "Get current weather with cords in an array, [lon, lat]" do
+  it 'Get current weather with cords in an array, [lon, lat]' do
     response = OpenWeather::CurrentWeather.by_coords(coords: [-0.8393, 9.40078])
-    expect(response["name"]).to eq("Tamale")
+    expect(response['name']).to eq('Tamale')
   end
-  it "Get current weather by zipcode and country code" do
-    response = OpenWeather::CurrentWeather.by_zip(zipcode: "94040", country: "us")
-    expect(response["name"]).to eq("Mountain View")
+  it 'Get current weather by zipcode and country code' do
+    response = OpenWeather::CurrentWeather.by_zip(zipcode: '94040', country: 'us')
+    expect(response['name']).to eq('Mountain View')
   end
 end
