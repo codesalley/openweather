@@ -10,6 +10,17 @@ class Helpers
     JSON.parse data
   end
 
+  def swtich_url(method)
+    case method
+    when 'current_wether'
+      'https://api.openweathermap.org/data/2.5/weather?'
+    when 'hourly'
+      'pro.openweathermap.org/data/2.5/forecast/hourly?'
+    when 'find'
+      'api.openweathermap.org/data/2.5/find?'
+    end
+  end
+
   def name_to_url(url, name, api_key, units, lang)
     "#{url}q=#{name}&appid=#{api_key}&lang=#{lang}&units=#{units}"
   end
@@ -24,5 +35,9 @@ class Helpers
 
   def zipcode_to_url(url, zip, country, api_key, units, lang)
     "#{url}zip=#{zip},#{country}&appid=#{api_key}&lang=#{lang}&units=#{units}"
+  end
+
+  def find_to_url(url, coords, count, api_key, units, lang)
+    "#{url}lat=#{coords[1]}&lon=#{coords[0]}&appid=#{api_key}&cnt=#{count}&lang=#{lang}&units=#{units}"
   end
 end

@@ -1,7 +1,6 @@
 module OpenWeather
   class Configuration
-    attr_accessor :api_key
-    attr_reader :weather_base_uri
+    attr_accessor :api_key, :weather_base_uri
 
     def initialize
       @api_key = nil
