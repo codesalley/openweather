@@ -1,6 +1,6 @@
 # OpenWeather
 
-Open Weather Gem, A wrapper around open weather api, makes working with weather fun.
+Open Weather Gem, A wrapper around open weather API, makes working with weather fun.
 
 ## Installation
 
@@ -22,7 +22,7 @@ Or install it yourself as:
 
 ### Configuration
 
-Add api key in config file `config/initializers/open_weather.rb`
+Create a config file in initializers and add an API key `config/initializers/open_weather.rb`
 
 ```ruby
 OpenWeather.config do |config|
@@ -32,7 +32,7 @@ end
 
 ## Current Weather Data
 
-params overview
+Params Overview
 
 ```h
   ||- name -> string
@@ -59,7 +59,7 @@ params overview
      #params: zipcode -> 94040, lang -> 'en', units -> "standard"
   ```
 
-### Get Weather by geographic coordinates[lon, lat]. more info -> [openweathermap.org](https://openweathermap.org/current#geo)
+### Get weather by geographic coordinates[lon, lat]. more info -> [openweathermap.org](https://openweathermap.org/current#geo)
 
 - ```ruby
       OpenWeather::CurrentWeather.by_coords(coords: [-0.8393, 9.40078])
