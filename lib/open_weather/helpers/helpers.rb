@@ -1,5 +1,5 @@
-require 'json'
-require 'open_weather'
+require "json"
+require "open_weather"
 
 class Helpers
   def to_json(data)
@@ -8,6 +8,15 @@ class Helpers
       return JSON.parse(tmp)
     end
     JSON.parse data
+  end
+
+  def swtich_url(method)
+    case method
+    when "current_wether"
+      return "https://api.openweathermap.org/data/2.5/weather?"
+    when "hourly"
+      return "pro.openweathermap.org/data/2.5/forecast/hourly?"
+    end
   end
 
   def name_to_url(url, name, api_key, units, lang)
