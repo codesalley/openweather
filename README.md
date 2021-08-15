@@ -7,7 +7,7 @@ Open Weather Gem, A wrapper around open weather API, makes working with weather 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'open_weather'
+gem 'open_weather_sdk'
 ```
 
 And then execute:
@@ -16,7 +16,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install open_weather
+    $ gem install open_weather_sdk
 
 ## Usage
 

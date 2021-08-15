@@ -1,7 +1,7 @@
 require_relative 'lib/open_weather/version'
 
 Gem::Specification.new do |spec|
-  spec.name = 'open_weather'
+  spec.name = 'open_weather_sdk'
   spec.version = OpenWeather::VERSION
   spec.authors = ['code salley']
   spec.email = ['codesalley@gmail.com']
