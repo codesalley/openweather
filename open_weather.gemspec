@@ -8,10 +8,13 @@ Gem::Specification.new do |spec|
 
   spec.summary = 'Openweather gem, getting weather made simple'
   spec.description = 'A wrapper around openwather api'
-  spec.homepage = 'https://github.com/codesalley/openweather/blob/master/README.md'
+  spec.homepage = 'https://github.com/codesalley/openweather/'
   spec.license = 'MIT'
   spec.required_ruby_version = '>= 2.5.0'
 
+  spec.metadata = {
+    'github_repo' => 'git@github.com:codesalley/openweather.git'
+  }
   # spec.metadata["allowed_push_host"] = "TODO: Set to 'https://mygemserver.com'"
 
   spec.metadata['homepage_uri'] = spec.homepage
