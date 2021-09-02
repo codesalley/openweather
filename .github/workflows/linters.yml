@@ -17,3 +17,18 @@ jobs:
           [ -f .rubocop.yml ] || .rubocop.yml
       - name: Rubocop Report
         run: rubocop --color
+
+      - name: Set Credentials
+        run: |
+          mkdir -p $HOME/.gem
+          touch $HOME/.gem/credentials
+          chmod 0600 $HOME/.gem/credentials
+          printf -- "---\n:github: Bearer ${GITHUB_TOKEN}\n" > $HOME/.gem/credentials
+        env:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+      - name: Publish to GitHub Packages
+        run: |
+          export OWNER=$( echo ${{ github.repository }} | cut -d "/" -f 1 )
+          gem build station.gemspec
+          gem push --KEY github --host https://rubygems.pkg.github.com/${OWNER} *.gem
+          gem push *.gem
