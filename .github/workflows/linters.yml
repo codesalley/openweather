@@ -17,3 +17,9 @@ jobs:
           [ -f .rubocop.yml ] || .rubocop.yml
       - name: Rubocop Report
         run: rubocop --color
+
+      - name: Build and publish gem
+        uses: jstastny/publish-gem-to-github@v1.3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          owner: codesalley

@@ -8,15 +8,18 @@ Gem::Specification.new do |spec|
 
   spec.summary = 'Openweather gem, getting weather made simple'
   spec.description = 'A wrapper around openwather api'
-  spec.homepage = 'https://github.com/codesalley/openweather/blob/main/README.md'
+  spec.homepage = 'https://github.com/codesalley/openweather/'
   spec.license = 'MIT'
   spec.required_ruby_version = '>= 2.5.0'
 
+  spec.metadata = {
+    'github_repo' => 'git@github.com:codesalley/openweather.git'
+  }
   # spec.metadata["allowed_push_host"] = "TODO: Set to 'https://mygemserver.com'"
 
   spec.metadata['homepage_uri'] = spec.homepage
-  spec.metadata['source_code_uri'] = 'https://github.com/codesalley/openweather/blob/main/README.md'
-  spec.metadata['changelog_uri'] = 'https://github.com/codesalley/openweather/blob/main/CHANGELOG.md'
+  spec.metadata['source_code_uri'] = 'https://github.com/codesalley/openweather/blob/master/README.md'
+  spec.metadata['changelog_uri'] = 'https://github.com/codesalley/openweather/blob/master/CHANGELOG.md'
 
   # Specify which files should be added to the gem when it is released.
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.
