@@ -10,7 +10,7 @@ class Helpers
     JSON.parse data
   end
 
-  def swtich_url(method)
+  def switch_url(method)
     case method
     when 'current_wether'
       'https://api.openweathermap.org/data/2.5/weather?'
