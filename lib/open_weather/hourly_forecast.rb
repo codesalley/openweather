@@ -7,7 +7,7 @@ require 'logger'
 module OpenWeather
   class HourlyForecast
     @helper = Helpers.new
-    # helper params to return defferent urls "current_wether", "hourly"
+    # helper params to return defferent urls "current_weather", "hourly"
     def self.by_city(name: '', units: 'standard', lang: 'en')
       OpenWeather.configuration.weather_base_uri = @helper.switch_url('hourly')
       OpenWeather::NetworkRequest.by_city(name: name, units: units, lang: lang)

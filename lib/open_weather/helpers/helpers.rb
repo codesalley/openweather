@@ -12,7 +12,7 @@ class Helpers
 
   def switch_url(method)
     case method
-    when 'current_wether'
+    when 'current_weather'
       'https://api.openweathermap.org/data/2.5/weather?'
     when 'hourly'
       'pro.openweathermap.org/data/2.5/forecast/hourly?'
