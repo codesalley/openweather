@@ -34,7 +34,7 @@ end
 
 Params Overview
 
-```h
+```swift
   ||- name -> string
   ||- id -> string || integer, read more about city id's on https://openweathermap.org/current#cityid
   ||- coords -> array [lon, lat]
@@ -85,7 +85,7 @@ Params Overview
 
 ## Follow me √
 
-[Twitter ≈> \_\_salley](https://twitter.com/__salley)
+[Twitter ≈> codesalley](https://twitter.com/codesalley)
 
 ## Contributing
 
