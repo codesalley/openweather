@@ -63,7 +63,7 @@ Params Overview
 
 - ```ruby
       OpenWeather::CurrentWeather.by_coords(coords: [-0.8393, 9.40078])
-      #params: corods -> [lon, lat], lang -> 'en', units -> "standard"
+      #params: coords -> [lon, lat], lang -> 'en', units -> "standard"
   ```
 
 ### Get weather by city id. more info -> [openweathermap.org](https://openweathermap.org/current#cityid)
