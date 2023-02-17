@@ -57,7 +57,7 @@ PLATFORMS
 DEPENDENCIES
   open_weather_sdk!
   rake (~> 13.0)
-  rspec (~> 3.0)
+  rspec
   rubocop (~> 1.7)
 
 BUNDLED WITH
