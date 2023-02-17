@@ -13,7 +13,8 @@ Gem::Specification.new do |spec|
   spec.required_ruby_version = '>= 2.5.0'
 
   spec.metadata = {
-    'github_repo' => 'git@github.com:codesalley/openweather.git'
+    'github_repo' => 'git@github.com:codesalley/openweather.git',
+    'rubygems_mfa_required' => 'true'
   }
   # spec.metadata["allowed_push_host"] = "TODO: Set to 'https://mygemserver.com'"
 
@@ -33,7 +34,6 @@ Gem::Specification.new do |spec|
   # Uncomment to register a new dependency of your gem
   spec.add_dependency 'httparty'
   spec.add_dependency 'json'
-  spec.add_development_dependency 'rspec'
 
   # For more information and examples about making a new gem, checkout our
   # guide at: https://bundler.io/guides/creating_gem.html
