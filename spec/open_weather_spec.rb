@@ -16,7 +16,6 @@ RSpec.describe OpenWeather do
   end
   it ' Get current weather by city id  ' do
     response = OpenWeather::CurrentWeather.by_city_id(id: 2_294_877)
-    p response
     expect(response['name']).to eq('Tamale')
   end
   it 'Get current weather with cords in an array, [lon, lat]' do

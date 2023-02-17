@@ -13,7 +13,8 @@ Gem::Specification.new do |spec|
   spec.required_ruby_version = '>= 2.5.0'
 
   spec.metadata = {
-    'github_repo' => 'git@github.com:codesalley/openweather.git'
+    'github_repo' => 'git@github.com:codesalley/openweather.git',
+    'rubygems_mfa_required' => 'true'
   }
   # spec.metadata["allowed_push_host"] = "TODO: Set to 'https://mygemserver.com'"
 
